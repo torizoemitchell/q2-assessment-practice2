@@ -23,6 +23,8 @@ You are responsible for creating
 
 We have provided you tests to help you build the database migrations, seeds and routes.  *Use them.*
 
+At the command line type `npm test` to run the tests.
+
 ### Messages Object
 
 You need to create routes, seed data and migrations for the following object.
