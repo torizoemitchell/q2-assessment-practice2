@@ -66,7 +66,7 @@ suite('test messages route', () => {
 
   test('POST /messages', (done) => {
   /* eslint-disable max-len */
-  request(messages)
+  request(server)
     .post('/messages')
     .set('Accept', 'application/json')
     .send({
