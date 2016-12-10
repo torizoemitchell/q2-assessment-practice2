@@ -71,7 +71,7 @@ suite('test messages route', () => {
     .set('Accept', 'application/json')
     .send({
       name:'Batman',
-      message:'To the batcave!'
+      message:'To the Batcave!'
     })
     .expect('Content-Type', /json/)
     .expect((res) => {
