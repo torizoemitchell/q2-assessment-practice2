@@ -28,6 +28,7 @@ At the command line type `npm test` to run the tests.
 ### Messages Object
 
 You need to create routes, seed data and migrations for the following object.
+**Note from Kristen:** We should specify data types and optional parameters (e.g., "not nullable") for table columns to help students pass the tests.
 
 ```javascript
 [{
