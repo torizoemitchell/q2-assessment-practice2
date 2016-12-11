@@ -19,7 +19,7 @@ suite('Schema for messages should be built.', () => {
       });
   });
 
-  test('The messages table does not match.', (done) => {
+  test('The messages table should have 5 columns with data types and parameters that match the required schema.', (done) => {
     knex('messages').columnInfo()
       .then((actual) => {
         const expected = {
@@ -63,7 +63,7 @@ suite('Schema for messages should be built.', () => {
           assert.deepEqual(
             actual[column],
             expected[column],
-            `Column ${column} is not the same`
+            `Column named - ${column} - is not the same.`
           );
         }
 
