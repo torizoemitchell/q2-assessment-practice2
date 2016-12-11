@@ -112,7 +112,7 @@ suite('test messages route', () => {
   test('DELETE /messages/:id', (done) => {
     /* eslint-disable max-len */
     request(server)
-      .del('/messages/3')
+      .del('/messages/2')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect((res) => {
@@ -120,9 +120,9 @@ suite('test messages route', () => {
         delete res.body.updatedAt;
       })
       .expect(200, {
-        id: 3,
+        id: 2,
         name:'Batman',
-        message:'To the Batcave!'
+        message:'I\'m Batman'
       }, done);
 
       /* eslint-enable max-len */
