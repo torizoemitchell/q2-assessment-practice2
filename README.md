@@ -51,8 +51,8 @@ You need to create routes, seed data and migrations for the following object.
 │                                          messages                                        │
 ├─────────────┬─────────────────────────┬──────────────────────────────────────────────────┤
 │id           │serial                   │primary key                                       │
-|name         │varchar(255)             │not null default ''                               │
-|message      │varchar(255)             │not null default ''                               │
+|name         │varchar(255)             │not null                                          │
+|message      │varchar(255)             │not null                                          │
 │created_at   │timestamp with time zone │not null default now()                            │
 │updated_at   │timestamp with time zone │not null default now()                            │
 └─────────────┴─────────────────────────┴──────────────────────────────────────────────────┘
