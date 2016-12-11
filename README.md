@@ -28,6 +28,8 @@ We have provided tests to help you build the database migrations, seeds and rout
 
 At the command line type `npm test` to run the tests.
 
+**TIP: When testing your migrations you may need to drop and recreate your database before running the test so that your migration changes are reflected in the database.**
+
 ### Messages Object
 
 You need to create routes, seed data and migrations for the following object.
