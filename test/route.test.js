@@ -8,7 +8,7 @@ const request = require('supertest');
 const knex = require('../knex');
 const server = require('../server');
 
-suite('test messages route', () => {
+suite('CRUD routes for messages resource should be created.', () => {
 
   before((done) => {
   knex.migrate.latest()
@@ -30,7 +30,7 @@ suite('test messages route', () => {
       });
   });
 
-  test('GET /messages', (done) => {
+  test('GET /messages should return the id,name,and message of all messages.', (done) => {
     /* eslint-disable max-len */
     request(server)
       .get('/messages')
@@ -49,7 +49,7 @@ suite('test messages route', () => {
       /* eslint-enable max-len */
   });
 
-  test('GET /messages/:id', (done) => {
+  test('GET /messages/:id should return the id,name,and message of a single message.', (done) => {
     /* eslint-disable max-len */
     request(server)
       .get('/messages/1')
@@ -64,7 +64,7 @@ suite('test messages route', () => {
       /* eslint-enable max-len */
   });
 
-  test('POST /messages', (done) => {
+  test('POST /messages should create a new message and return the name and message that were created.', (done) => {
   /* eslint-disable max-len */
   request(server)
     .post('/messages')
@@ -86,7 +86,7 @@ suite('test messages route', () => {
     /* eslint-enable max-len */
   });
 
-  test('PATCH /messages/:id', (done) => {
+  test('PATCH /messages/:id should update a message and return the name and message that were updated.', (done) => {
   /* eslint-disable max-len */
   request(server)
     .patch('/messages/1')
@@ -109,7 +109,7 @@ suite('test messages route', () => {
     /* eslint-enable max-len */
   });
 
-  test('DELETE /messages/:id', (done) => {
+  test('DELETE /messages/:id should delete a message and return the id,name, and message that were deleted.', (done) => {
     /* eslint-disable max-len */
     request(server)
       .del('/messages/2')

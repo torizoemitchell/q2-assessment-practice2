@@ -8,7 +8,7 @@ const assert = require('chai').assert;
 const { suite, test } = require('mocha');
 const knex = require('../knex');
 
-suite('messages seed data', () => {
+suite('Seed data for messages should be created.', () => {
   before((done) => {
     knex.migrate.latest()
       .then(() => {
@@ -29,7 +29,7 @@ suite('messages seed data', () => {
       });
   });
 
-  test('messages rows', (done) => {
+  test('messages table: seed data should match test data.', (done) => {
     knex('messages').orderBy('id', 'ASC')
       .then((actual) => {
         /* eslint-disable max-len */
@@ -54,7 +54,7 @@ suite('messages seed data', () => {
           assert.deepEqual(
             actual[i],
             expected[i],
-            `Row id=${i + 1} not the same`
+            `Row where id=${i + 1} does not match.`
           );
         }
 

@@ -8,7 +8,7 @@ const request = require('supertest');
 const server = require('../server');
 
 
-suite('test client', () => {
+suite('User should be able to access the site from the browser.', () => {
 
   test('GET /index.html', (done) => {
     /* eslint-disable max-len */

@@ -8,7 +8,7 @@ const assert = require('chai').assert;
 const { suite, test } = require('mocha');
 const knex = require('../knex');
 
-suite('messages schema', () => {
+suite('Schema for messages should be built.', () => {
   before((done) => {
     knex.migrate.latest()
       .then(() => {
@@ -19,7 +19,7 @@ suite('messages schema', () => {
       });
   });
 
-  test('messages columns', (done) => {
+  test('The messages table should have 5 columns with data types and parameters that match the required schema.', (done) => {
     knex('messages').columnInfo()
       .then((actual) => {
         const expected = {
@@ -63,7 +63,7 @@ suite('messages schema', () => {
           assert.deepEqual(
             actual[column],
             expected[column],
-            `Column ${column} is not the same`
+            `Column named - ${column} - is not the same.`
           );
         }
 
