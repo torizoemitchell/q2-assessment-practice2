@@ -8,7 +8,7 @@ const request = require('supertest');
 const knex = require('../knex');
 const server = require('../server');
 
-suite('CRUD routes for messages resource should be created.', () => {
+suite('Part 3: CRUD routes for messages resource should be created.', () => {
 
   before((done) => {
   knex.migrate.latest()
