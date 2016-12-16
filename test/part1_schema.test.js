@@ -8,7 +8,7 @@ const assert = require('chai').assert;
 const { suite, test } = require('mocha');
 const knex = require('../knex');
 
-suite('Schema for messages should be built.', () => {
+suite('Part 1: Schema for messages should be built.', () => {
   before((done) => {
     knex.migrate.latest()
       .then(() => {
