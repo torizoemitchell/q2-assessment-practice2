@@ -1,8 +1,14 @@
 # Galvanize Message
 
+---
+
+## Read the entire README before beginning. Commit often.
+
+---
+
 ## Important Note
 
-This is a timed assessment.  You should be able to complete it in under 3 hours.  Remember to commit and push to your forked repository. At the very least, you should commit after each test passes. We will use the timestamps to evaluate how long it took.
+This is a timed assessment.  You should be able to complete it in under 3 hours.  Remember to commit and push to your forked repository. At the _very least_, you should commit after each test passes. We will use the timestamps to evaluate how long it took.
 
 ## Project Description
 
@@ -13,6 +19,7 @@ The app is a simple message board.
 You are responsible for:
 
 - [ ] Forking and cloning this GitHub Repo.
+- [ ] Creating the test and development databases locally.
 - [ ] Database Migration.
 - [ ] Database Seed Data.
 - [ ] RESTful API to handle messages resource.
