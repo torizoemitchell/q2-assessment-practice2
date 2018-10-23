@@ -8,13 +8,16 @@
     "test": "mocha"
   },
   "dependencies": {
-    "chai": "^4.2.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "knex": "^0.15.2",
-    "mocha": "^5.2.0",
     "morgan": "~1.9.0",
     "pg": "^7.5.0"
+  },
+  "devDependencies": {
+    "supertest": "^3.3.0",
+    "mocha": "^5.2.0",
+    "chai": "^4.2.0"
   }
 }

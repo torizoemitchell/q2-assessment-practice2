@@ -119,9 +119,9 @@ suite('Part 3: CRUD routes for messages resource should be created.', () => {
       .expect((res) => {
         delete res.body.createdAt;
         delete res.body.updatedAt;
+        delete res.body.id
       })
       .expect(200, {
-        id: 2,
         name:'Batman',
         message:'I\'m Batman'
       }, done);

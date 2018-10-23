@@ -34,28 +34,28 @@ suite('Part 1: Schema for messages should be built.', () => {
             type: 'character varying',
             maxLength: 255,
             nullable: false,
-            defaultValue: null
+            defaultValue:  "NULL::character varying"
           },
 
           message: {
             type: 'character varying',
             maxLength: 255,
             nullable: false,
-            defaultValue: null
+            defaultValue:  "NULL::character varying"
           },
 
           created_at: {
             type: 'timestamp with time zone',
             maxLength: null,
             nullable: false,
-            defaultValue: 'now()'
+            defaultValue: 'CURRENT_TIMESTAMP'
           },
 
           updated_at: {
             type: 'timestamp with time zone',
             maxLength: null,
             nullable: false,
-            defaultValue: 'now()'
+            defaultValue: 'CURRENT_TIMESTAMP'
           }
         };
 
