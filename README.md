@@ -20,11 +20,8 @@ You are responsible for:
 - [ ] Creating the test and development databases locally.
 - [ ] Creating the database migration.
 - [ ] Creating the database seed data.
-- [ ] Creating the RESTful API to handle messages resource.
-- [ ] Creating a client website that enables all CRUD functionality for messages resource. *You can decide what form the client website takes.*
+- [ ] Creating a CRUD RESTful API to handle messages resource.
 - [ ] Deployment of full stack app on Heroku.
-
-**TIP: Make the site functional before you make it pretty. Functional html pages are sufficient for the 3-hour requirement.**
 
 
 ### Tests
@@ -58,7 +55,7 @@ You need to create routes, seed data and migrations for the following object.
 │id           │serial                   │primary key                                       │
 |name         │varchar(255)             │not null                                          │
 |message      │varchar(255)             │not null                                          │
-│created_at   │timestamp with time zone │not null default now()                            │
-│updated_at   │timestamp with time zone │not null default now()                            │
+│created_at   │timestamp with time zone │not null default CURRENT_TIMESTAMP                │
+│updated_at   │timestamp with time zone │not null default CURRENT_TIMESTAMP                │
 └─────────────┴─────────────────────────┴──────────────────────────────────────────────────┘
 ```
