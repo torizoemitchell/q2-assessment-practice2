@@ -6,7 +6,7 @@
 
 ## Important Note
 
-This is a timed assessment.  You should be able to complete it in under 3 hours.  Remember to commit and push to your forked repository. At the _very least_, you should commit after each test passes. We will use the timestamps to evaluate how long it took.
+This is a timed assessment.  You should be able to complete it in under 90 minutes.  Remember to commit and push to your forked repository. At the _very least_, you should commit after each test passes. We will use the timestamps to evaluate how long it took.
 
 ## Project Description
 
