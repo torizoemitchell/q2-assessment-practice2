@@ -1,25 +1,20 @@
 {
   "name": "galvanize-message",
-  "version": "1.0.0",
-  "main": "server.js",
-  "license": "MIT",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
     "test": "mocha"
   },
-  "keywords": [],
-  "author": "",
-  "description": "",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.14.0",
-    "knex": "^0.12.6",
-    "pg": "^6.1.0"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0",
-    "supertest": "^2.0.1"
+    "chai": "^4.2.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "knex": "^0.15.2",
+    "mocha": "^5.2.0",
+    "morgan": "~1.9.0",
+    "pg": "^7.5.0"
   }
 }

@@ -6,7 +6,7 @@ process.env.NODE_ENV = 'test';
 const { suite, test } = require('mocha');
 const request = require('supertest');
 const knex = require('../knex');
-const server = require('../server');
+const app = require('../app');
 
 suite('Part 3: CRUD routes for messages resource should be created.', () => {
 
@@ -32,7 +32,7 @@ suite('Part 3: CRUD routes for messages resource should be created.', () => {
 
   test('GET /messages should return the id,name,and message of all messages.', (done) => {
     /* eslint-disable max-len */
-    request(server)
+    request(app)
       .get('/messages')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
@@ -51,7 +51,7 @@ suite('Part 3: CRUD routes for messages resource should be created.', () => {
 
   test('GET /messages/:id should return the id,name,and message of a single message.', (done) => {
     /* eslint-disable max-len */
-    request(server)
+    request(app)
       .get('/messages/1')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
@@ -66,7 +66,7 @@ suite('Part 3: CRUD routes for messages resource should be created.', () => {
 
   test('POST /messages should create a new message and return the name and message that were created.', (done) => {
   /* eslint-disable max-len */
-  request(server)
+  request(app)
     .post('/messages')
     .set('Accept', 'application/json')
     .send({
@@ -79,6 +79,7 @@ suite('Part 3: CRUD routes for messages resource should be created.', () => {
       delete res.body.updatedAt;
     })
     .expect(200, {
+      id: 3,
       name:'Batman',
       message:'To the Batcave!'
     }, done);
@@ -88,7 +89,7 @@ suite('Part 3: CRUD routes for messages resource should be created.', () => {
 
   test('PATCH /messages/:id should update a message and return the name and message that were updated.', (done) => {
   /* eslint-disable max-len */
-  request(server)
+  request(app)
     .patch('/messages/1')
     .set('Accept', 'application/json')
     .send({
@@ -111,7 +112,7 @@ suite('Part 3: CRUD routes for messages resource should be created.', () => {
 
   test('DELETE /messages/:id should delete a message and return the id,name, and message that were deleted.', (done) => {
     /* eslint-disable max-len */
-    request(server)
+    request(app)
       .del('/messages/2')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
