@@ -34,14 +34,14 @@ suite('Part 1: Schema for messages should be built.', () => {
             type: 'character varying',
             maxLength: 255,
             nullable: false,
-            defaultValue:  "NULL::character varying"
+            defaultValue: null
           },
 
           message: {
             type: 'character varying',
             maxLength: 255,
             nullable: false,
-            defaultValue:  "NULL::character varying"
+            defaultValue: null
           },
 
           created_at: {
