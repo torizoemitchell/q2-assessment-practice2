@@ -38,13 +38,18 @@ You need to create routes, seed data and migrations for the following object.
 
 ```javascript
 [{
-	id:1,
-  	name:'Criminal',
-  	message:'What Are You?'
+  id:1,
+  name:'Criminal',
+  message:'What Are You?',
+  created_at: '2016-06-26T14:26:16.000Z',
+  updated_at: '2016-06-26T14:26:16.000Z'
+
 },{
-	id:2,
-    name:'Batman',
-    message:'I\'m Batman'
+  id:2,
+  name:'Batman',
+  message:'I\'m Batman',
+  created_at: '2016-06-26T14:26:16.000Z',
+  updated_at: '2016-06-26T14:26:16.000Z'
 }]
 ```
 
