@@ -3,9 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "knex": "knex",
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "knex":"knex",
+    "heroku-postbuild":"knex migrate:rollback; knex migrate:latest; knex seed:run;",
+    "nodemon":"nodemon app.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -17,8 +21,11 @@
     "pg": "^7.5.0"
   },
   "devDependencies": {
-    "supertest": "^3.3.0",
+    "chai": "^4.2.0",
     "mocha": "^5.2.0",
-    "chai": "^4.2.0"
+    "supertest": "^3.3.0"
+  },
+  "engines": {
+    "node": "v10.12.0"
   }
 }
